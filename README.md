@@ -17,5 +17,7 @@ A Discord bot that provides real time NBA scores, schedules, and game informatio
 3. Create .env file with your Discord token
 4. Run: `python NBA.py`
 
+## Update Logs
+
 ## Developer
 Developed by HoppersVV
