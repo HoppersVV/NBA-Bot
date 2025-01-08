@@ -19,5 +19,7 @@ A Discord bot that provides real time NBA scores, schedules, and game informatio
 
 ## Update Logs
 
+- Fixed !schedule becoming an error when ran. (not fully finished)
+
 ## Developer
 Developed by HoppersVV
