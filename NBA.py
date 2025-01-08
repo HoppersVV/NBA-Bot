@@ -91,11 +91,11 @@ async def scores(ctx):
 async def schedule(ctx, days: int = 7):
     days = min(max(1, days), 14)
     gamefinder = leaguegamefinder.LeagueGameFinder()
-    today = datetime.now(pytz.UTC)
+    today = datetime.now(pytz.UTC).date()
     future_date = today + timedelta(days=days)
     
     games = gamefinder.get_dict()['resultSets'][0]['rowSet']
-    upcoming_games = [g for g in games if datetime.strptime(g[5], '%Y-%m-%d') > today.date()]
+    upcoming_games = [g for g in games if datetime.strptime(g[5], '%Y-%m-%d').date() > today]
     
     embed = discord.Embed(
         title=f"📅 Next {days} Days of NBA Games",
